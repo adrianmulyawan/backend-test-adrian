@@ -24,16 +24,28 @@ module.exports = {
       ip_address: {
         type: Sequelize.STRING
       },
-      latitude: {
+      latitude_in: {
         type: Sequelize.STRING
       },
-      longitude: {
+      latitude_out: {
         type: Sequelize.STRING
       },
-      latitude_server: {
+      longitude_in: {
         type: Sequelize.STRING
       },
-      longitude_server: {
+      longitude_out: {
+        type: Sequelize.STRING
+      },
+      latitude_server_in: {
+        type: Sequelize.STRING
+      },
+      latitude_server_out: {
+        type: Sequelize.STRING
+      },
+      longitude_server_in: {
+        type: Sequelize.STRING
+      },
+      longitude_server_out: {
         type: Sequelize.STRING
       },
       is_late: {

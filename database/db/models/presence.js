@@ -23,10 +23,14 @@ module.exports = (sequelize, DataTypes) => {
     clock_in_at: DataTypes.TIME,
     clock_out_at: DataTypes.TIME,
     ip_address: DataTypes.STRING,
-    latitude: DataTypes.STRING,
-    latitude_server: DataTypes.STRING,
-    longitude: DataTypes.STRING,
-    longitude_server: DataTypes.STRING,
+    latitude_in: DataTypes.STRING,
+    latitude_out: DataTypes.STRING,
+    latitude_server_in: DataTypes.STRING,
+    latitude_server_out: DataTypes.STRING,
+    longitude_in: DataTypes.STRING,
+    longitude_out: DataTypes.STRING,
+    longitude_server_in: DataTypes.STRING,
+    longitude_server_out: DataTypes.STRING,
     is_late: DataTypes.BOOLEAN
   }, {
     sequelize,
