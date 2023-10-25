@@ -39,10 +39,6 @@
 
 - Body
 
-#### Request
-
-- Body
-
 ```json
 {
   "username": "bayusujat",
