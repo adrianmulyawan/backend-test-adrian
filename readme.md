@@ -24,10 +24,6 @@
 
 - Body
 
-#### Request
-
-- Body
-
 ```json
 {
   "fullname": "Bayu Sujatmoko",
