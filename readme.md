@@ -15,8 +15,8 @@
 - REGISTER (POST) : /api/v1/register
 - LOGIN (POST) : /api/v1/login
 - GET USER LOGIN (GET) : /api/v1/userLogin
-- CLOCK IN (POST) : api/v1/clockin
-- CLOCK OUT (POST) : api/v1/clockout
+- CLOCK IN (POST) : /api/v1/clockin
+- CLOCK OUT (POST) : /api/v1/clockout
 
 ### POST /api/v1/register
 
