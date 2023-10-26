@@ -58,7 +58,21 @@
 }
 ```
 
-### GET /api/v1/clockin
+#### Response
+
+401 - Token Unauthorized
+
+- Body
+
+```
+{
+    "status": "Failed",
+    "statusCode": 401,
+    "message": "Token Unauthorized!"
+}
+```
+
+### POST /api/v1/clockin
 
 #### Request
 
@@ -79,7 +93,7 @@
 }
 ```
 
-### GET /api/v1/clockout
+### POST /api/v1/clockout
 
 #### Request
 
