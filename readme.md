@@ -1,4 +1,4 @@
-# Backend Test PT Uninet Media Sakit by Adrian Mulyawan
+# Backend Test PT Uninet Media Sakti by Adrian Mulyawan
 
 ## How to Install
 
