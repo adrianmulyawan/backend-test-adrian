@@ -113,3 +113,29 @@
   "longitude_out": "longitude_from_fe"
 }
 ```
+
+#### Response
+
+401 - Token Unauthorized
+
+- Body
+
+```
+{
+    "status": "Failed",
+    "statusCode": 401,
+    "message": "Token Unauthorized!"
+}
+```
+
+400 - The user has not yet logged in
+
+- Body
+
+```
+{
+    "status": "Failed",
+    "statusCode": 400,
+    "message": "You haven't been absent yet!"
+}
+```
