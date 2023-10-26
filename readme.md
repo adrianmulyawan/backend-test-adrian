@@ -26,10 +26,10 @@
 
 ```json
 {
-  "fullname": "Bayu Sujatmoko",
-  "email": "bayusujatmoko@gmail.com",
-  "username": "bayusujat",
-  "password": "test1234"
+    "fullname": "Budi Susanto",
+    "email": "budisusanto@gmail.com",
+    "username": "budisusanto",
+    "password": "test1234"
 }
 ```
 
@@ -113,28 +113,44 @@
 {
     "status": "Success",
     "statusCode": 200,
-    "message": "Register Successfully!",
-    "data": {
-        "id": 4,
-        "fullname": "Budi Susanto",
-        "email": "budisusanto@gmail.com",
-        "username": "budisusanto",
-        "password": "$2b$12$uIRVpSFQIz9pOgTFK.ufeeKLsNdwLka3l5Spl2SCYTol/2oEUWAKC",
-        "updatedAt": "2023-10-26T03:49:30.666Z",
-        "createdAt": "2023-10-26T03:49:30.666Z"
-    }
+    "message": "Login Successfully!",
+    "data": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZnVsbG5hbWUiOiJBZHJpYW4gTXVseWF3YW4iLCJlbWFpbCI6ImFkcmlhbm11bHlhd2FuQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiYWRyaWFubXVseWF3YW4iLCJpYXQiOjE2OTgyOTIzNjYsImV4cCI6MTY5ODI5NTk2Nn0.p7YO_NNNmNOpVUw6zAUbR0x3_YmqQ6QBg638a5VcuR0"
 }
 ```
 
-400 - Fullname or Username or Email or Password Empty
+400 - Username and Password is Empty
 
 - Body
 
 ```
 {
-    status: 'Failed',
-    statusCode: 400,
-    message: "Email, Password, Username, and Full Name Can't be Empty!"
+    "status": "Failed",
+    "statusCode": 400,
+    "message": "Username and Password Can't be Empty!"
+}
+```
+
+400 - Username Not Found
+
+- Body
+
+```
+{
+    "status": "Failed",
+    "statusCode": 404,
+    "message": "Username is Not Found!"
+}
+```
+
+400 - Wrong Password
+
+- Body
+
+```
+{
+    "status": "Failed",
+    "statusCode": 400,
+    "message": "Wrong Password!"
 }
 ```
 
@@ -151,6 +167,66 @@
 ```
 
 #### Response
+
+200 - User Found
+
+- Body
+
+```
+{
+    "status": "Success",
+    "statusCode": 200,
+    "message": "Data User Found!",
+    "data": {
+        "id": 1,
+        "fullname": "Adrian Mulyawan",
+        "email": "adrianmulyawan@gmail.com",
+        "username": "adrianmulyawan",
+        "createdAt": "2023-10-24T12:23:24.993Z",
+        "updatedAt": "2023-10-24T12:23:24.993Z",
+        "presences": [
+            {
+                "id": 12,
+                "user_id": 1,
+                "presance_date": "2023-10-25T13:35:15.000Z",
+                "clock_in_at": "20:35:15",
+                "clock_out_at": "20:37:23",
+                "ip_address": "180.242.213.90",
+                "latitude_in": "-6.180",
+                "latitude_out": "-6.180",
+                "latitude_server_in": "-6.175",
+                "latitude_server_out": "-6.175",
+                "longitude_in": "106.1",
+                "longitude_out": "106.1",
+                "longitude_server_in": "106.8286",
+                "longitude_server_out": "106.8286",
+                "is_late": true,
+                "createdAt": "2023-10-25T13:35:15.973Z",
+                "updatedAt": "2023-10-25T13:37:23.454Z"
+            },
+            {
+                "id": 13,
+                "user_id": 1,
+                "presance_date": "2023-10-26T03:23:06.000Z",
+                "clock_in_at": "10:23:06",
+                "clock_out_at": "10:39:10",
+                "ip_address": "180.242.215.134",
+                "latitude_in": "-6.180",
+                "latitude_out": "-6.180",
+                "latitude_server_in": "-6.175",
+                "latitude_server_out": "-6.175",
+                "longitude_in": "106.1",
+                "longitude_out": "106.1",
+                "longitude_server_in": "106.8286",
+                "longitude_server_out": "106.8286",
+                "is_late": true,
+                "createdAt": "2023-10-26T03:23:06.311Z",
+                "updatedAt": "2023-10-26T03:39:10.482Z"
+            }
+        ]
+    }
+}
+```
 
 401 - Token Unauthorized
 
@@ -187,7 +263,7 @@
 
 #### Response
 
-200 - Presence on time
+200 - Presence ontime
 
 - Body
 
