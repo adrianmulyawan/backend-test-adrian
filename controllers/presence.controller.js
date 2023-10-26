@@ -203,8 +203,8 @@ const clockOut = async (req, res) => {
     });
     // console.info(findPresence,currentDateInUTCPlus7, '=> absen user4');
 
-    // > Jika user sudah absen bisa update waktu balik
-    if (findPresence && findPresence.clock_out_at == null) {
+    // > Jika user sudah absen masuk dan waktu sudah >= 17:00 bisa update waktu balik
+    if (findPresence && findPresence.clock_out_at == null && hours >= 17) {
       // > Absen Balik
       const updatePresence = await findPresence.update({
         clock_out_at: formattedTime,
@@ -225,7 +225,7 @@ const clockOut = async (req, res) => {
       return res.status(400).json({
         status: 'Failed',
         statusCode: 400,
-        message: "You haven't been absent yet!"
+        message: "You haven't been absent yet or make an absence to go home before 17:00!"
       });
     }
 

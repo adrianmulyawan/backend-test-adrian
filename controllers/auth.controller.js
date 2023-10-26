@@ -1,5 +1,6 @@
 const Models = require('../database/db/models');
 const User = Models.User;
+const Presence = Models.Presence;
 
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
@@ -54,7 +55,7 @@ const login = async (req, res) => {
       return res.status(400).json({
         status: 'Failed',
         statusCode: 400,
-        message: "Email and Password Can't be Empty!"
+        message: "Username and Password Can't be Empty!"
       });
     }
 
@@ -117,7 +118,11 @@ const getUserLogin = async (req, res) => {
       },
       attributes: {
         exclude: ['password']
-      }
+      },
+      include: [{
+        model: Presence,
+        as: 'presences'
+      }]
     });
 
     if (!user) {
